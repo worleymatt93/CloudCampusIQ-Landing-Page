@@ -1,0 +1,161 @@
+:root {
+    --primary-color: #E2725B;    /* Main brand color, used for header background, buttons, etc */
+    --secondary-color: #D58D8D;  /* Secondary brand color, used for footer, accents */
+    --accent-color: #FA6404;     /* Bright accents, hover stater */
+    --highlight-color: #FFDD44;  /* Highlights, callouts */
+    --text-color: #4A1E12;       /* Text color for readability */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body, html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--highlight-color) 100%);;
+}
+
+/* Container styles */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Header styles with Flexbox for layout */
+header {
+    background-color: transparent;
+    padding: 20px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo styles */
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.logo span {
+    color: var(--highlight-color);
+}
+
+/* Navigation styles */
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+/* Hero section styles */
+.hero {
+    background: transparent;
+    color: var(--text-color);
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    color: var(--text-color);
+}
+
+/* Call-to-Action button styles */
+.cta-button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--highlight-color);
+}
+
+/* Features section styles */
+.features {
+    background-color: transparent;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.features h3 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.features-list {
+    list-style: none;
+    font-size: 1.1rem;
+}
+
+.features-list li {
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: transparent;
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+}
